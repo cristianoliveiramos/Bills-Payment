@@ -1,0 +1,24 @@
+<p>
+  <mat-toolbar class="toolbar">
+    <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon" class="button-default" (click)="expandMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Menu</span>
+    <span class="menu-spacer"></span>
+
+    <div class="icons-space">
+      <div class="icon-user">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" class="button-default">
+          <mat-icon>person</mat-icon>
+        </button>
+        <span>User</span>
+      </div>
+
+      <div class="switch-dark-mode">
+        <mat-slide-toggle>
+          <span class="label">Modo Escuro</span>
+        </mat-slide-toggle>
+      </div>
+    </div>
+  </mat-toolbar>
+</p>

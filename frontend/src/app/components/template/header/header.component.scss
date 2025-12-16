@@ -1,0 +1,32 @@
+.toolbar {
+  background-color: #244879;
+  color: #FFF;
+}
+
+.button-default {
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+}
+
+.label {
+  color: #FFF;
+  margin: 0;
+}
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.icons-space {
+  width: 20vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.icon-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
