@@ -1,0 +1,80 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 5px;
+}
+
+.main-banner {
+  height: 80vh;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.subtitle {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container-content {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+}
+
+.wrap-button-login {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: 0;
+
+  & :hover, :active {
+    letter-spacing: 5px;
+  }
+
+  & :after,
+    :before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#25497a, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+
+  & :hover:after,
+    :hover:before {
+    backface-visibility: hidden;
+    border-color: var(--default-color);
+    transition: width 350ms ease-in-out;
+    width: 100%
+  }
+
+  & :hover:before {
+    bottom: auto;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.wrap-button-login > span {
+  font-size: large;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--default-color);
+}
