@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  gap: 5px;
 }
 
 .main-banner {
@@ -39,38 +38,62 @@
   cursor: pointer;
   align-items: center;
   letter-spacing: 0;
+}
 
-  & :hover, :active {
-    letter-spacing: 5px;
+.btn {
+  color: var(--default-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+   &:hover {
+    text-decoration: none;
   }
+}
 
-  & :after,
-    :before {
-    backface-visibility: hidden;
-    border: 1px solid rgba(#25497a, 0);
-    bottom: 0px;
-    content: " ";
-    display: block;
-    margin: 0 auto;
-    position: relative;
-    transition: all 280ms ease-in-out;
-    width: 0;
-  }
+.btn-1 {
+  background: darken(#fff, 1.5%);
+  font-weight: 400;
 
-  & :hover:after,
-    :hover:before {
-    backface-visibility: hidden;
-    border-color: var(--default-color);
-    transition: width 350ms ease-in-out;
-    width: 100%
-  }
-
-  & :hover:before {
-    bottom: auto;
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
     top: 0;
     width: 100%;
   }
+
+  rect {
+    fill: none;
+    stroke: var(--default-color);
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
 }
+
+
+  .btn-1:hover {
+    background: rgba(var(--default-color), 0);
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    rect {
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
 
 .wrap-button-login > span {
   font-size: large;
