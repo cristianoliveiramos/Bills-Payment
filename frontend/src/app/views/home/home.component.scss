@@ -1,0 +1,103 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-banner {
+  height: 80vh;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--default-color);
+}
+
+.subtitle {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container-content {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+}
+
+.wrap-button-login {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  letter-spacing: 0;
+}
+
+.btn {
+  color: var(--default-color);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+   &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-1 {
+  background: darken(#fff, 1.5%);
+  font-weight: 400;
+
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: var(--default-color);
+    stroke-width: 2;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+
+
+  .btn-1:hover {
+    background: rgba(var(--default-color), 0);
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    rect {
+      stroke-width: 5;
+      stroke-dasharray: 15, 310;
+      stroke-dashoffset: 48;
+      transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  }
+
+.wrap-button-login > span {
+  font-size: large;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--default-color);
+}

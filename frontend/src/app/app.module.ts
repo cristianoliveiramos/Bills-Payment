@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/template/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule }  from '@angular/material/icon'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatCardModule } from '@angular/material/card'
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
