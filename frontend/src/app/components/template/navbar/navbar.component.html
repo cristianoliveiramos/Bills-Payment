@@ -1,0 +1,62 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    class="sidenav"
+    mode="side"
+    opened
+    fixedInViewport="true"
+    fixedTopGap="64"
+  >
+    <mat-nav-list class="nav-list">
+      <a mat-list-item routerLink="/dashboard" class="btn from-left nav-list-item" matTooltip="Dashboard" matTooltipPosition="right">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="home icon"
+          fontIcon="home"
+        ></mat-icon>
+        <!-- <span>Início</span> -->
+      </a>
+      <a mat-list-item routerLink="/fornecedores" class="btn from-left nav-list-item" matTooltip="Fornecedores" matTooltipPosition="right">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="local_shipping icon"
+          fontIcon="local_shipping"
+        ></mat-icon>
+        <!-- <span>Cartões</span> -->
+      </a>
+      <a mat-list-item routerLink="/banks" class="btn from-left nav-list-item" matTooltip="Pagamentos" matTooltipPosition="right">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="attach_money icon"
+          fontIcon="attach_money"
+        ></mat-icon>
+        <!-- <span>Bancos</span> -->
+      </a>
+      <a mat-list-item class="btn from-left nav-list-item" matTooltip="Teste" matTooltipPosition="right">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="trending up icon"
+          fontIcon="trending_up"
+        ></mat-icon>
+        <!-- <span>Movimentação</span> -->
+      </a>
+
+      <a mat-list-item class="btn from-left nav-list-item" matTooltip="Teste" matTooltipPosition="right">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="content_paste_search icon"
+          fontIcon="content_paste_search"
+        ></mat-icon>
+        <!-- <span>Relatórios</span> -->
+      </a>
+
+      <a routerLink="/" mat-list-item class="btn from-left nav-list-item" matTooltip="Sair" matTooltipPosition="right">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="logout icon"
+          fontIcon="logout"
+        ></mat-icon>
+        <!-- <span>Logout</span> -->
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
