@@ -19,7 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatListModule } from '@angular/material/list'
-import { MatTooltipModule } from '@angular/material/tooltip'
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { SuppliersReadComponent } from './components/suppliers/suppliers-read/suppliers-read.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { MatTooltipModule } from '@angular/material/tooltip'
     HeaderComponent,
     LoginComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    SuppliersReadComponent
   ],
   imports: [
     BrowserModule,
