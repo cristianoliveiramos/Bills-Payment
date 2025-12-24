@@ -19,7 +19,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'suppliers',
+    path: 'fornecedores',
     component: SuppliersReadComponent
   }
 ];
