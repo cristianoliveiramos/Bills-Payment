@@ -7,20 +7,26 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarComponent } from './components/template/navbar/navbar.component';
+import { SuppliersReadComponent } from './components/suppliers/suppliers-read/suppliers-read.component';
+import { SuppliersCrudComponent } from './views/suppliers-crud/suppliers-crud.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule }  from '@angular/material/icon'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatCardModule } from '@angular/material/card';
-import { LoginComponent } from './views/login/login.component'
-import { MatFormFieldModule } from '@angular/material/form-field'
+import { LoginComponent } from './views/login/login.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatListModule } from '@angular/material/list'
+import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { SuppliersCrudComponent } from './views/suppliers-crud/suppliers-crud.component'
+import { MatTableModule } from '@angular/material/table'
+import { MatSortModule } from '@angular/material/sort'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatMenuModule } from '@angular/material/menu'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +35,7 @@ import { SuppliersCrudComponent } from './views/suppliers-crud/suppliers-crud.co
     LoginComponent,
     DashboardComponent,
     NavbarComponent,
+    SuppliersReadComponent,
     SuppliersCrudComponent
   ],
   imports: [
@@ -45,8 +52,12 @@ import { SuppliersCrudComponent } from './views/suppliers-crud/suppliers-crud.co
     ReactiveFormsModule,
     MatSidenavModule,
     MatListModule,
-    MatTooltipModule
-
+    MatTooltipModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
