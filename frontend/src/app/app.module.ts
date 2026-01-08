@@ -27,6 +27,8 @@ import { MatSortModule } from '@angular/material/sort'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu'
 import { HttpClientModule } from '@angular/common/http';
+import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     DashboardComponent,
     NavbarComponent,
     SuppliersReadComponent,
-    SuppliersCrudComponent
+    SuppliersCrudComponent,
+    SuppliersCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatPaginatorModule,
     MatSortModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

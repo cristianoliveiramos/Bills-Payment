@@ -1,0 +1,33 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<mat-card-content style="margin: 5px 100px">
+  <mat-card-title style="font-size: larger;">Novo Fornecedor</mat-card-title>
+  <form action="" style="margin: 5px 100px">
+    <mat-form-field>
+      <mat-label>Código do Fornecedor</mat-label>
+      <input matInput placeholder="Ex: 999"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Razão Social</mat-label>
+      <input matInput placeholder="Ex: Empresa Ltda"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Nome Fantasia</mat-label>
+      <input matInput placeholder="Ex: Loja de Roupas"/>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Telefone</mat-label>
+      <input matInput placeholder="Ex: (21) 9999-9999" type="tel"/>
+    </mat-form-field>
+  </form>
+  <div style="margin: 5px 100px">
+    <button mat-raised-button class="button-save" (click)="createSupplier()" routerLink="/fornecedores">
+      Salvar
+    </button>
+
+    <button mat-raised-button class="button-default" (click)="cancel()" routerLink="/fornecedores">
+      Cancelar
+    </button>
+  </div>
+</mat-card-content>

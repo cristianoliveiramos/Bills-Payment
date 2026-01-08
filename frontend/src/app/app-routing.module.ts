@@ -4,6 +4,7 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SuppliersReadComponent } from './components/suppliers/suppliers-read/suppliers-read.component';
+import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'fornecedores',
     component: SuppliersReadComponent
+  },
+  {
+    path: 'incluir-fornecedor',
+    component: SuppliersCreateComponent
   }
 ];
 
