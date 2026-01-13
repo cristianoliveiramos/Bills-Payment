@@ -3,9 +3,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import { Suppliers } from './suppliers.model';
+import { Supplier } from './suppliers.model';
 
-const suppliers: Suppliers[] = [
+const suppliers: Supplier[] = [
 
 ];
 
@@ -14,8 +14,8 @@ const suppliers: Suppliers[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class SuppliersDataSource extends DataSource<Suppliers> {
-  data: Suppliers[] = suppliers;
+export class SuppliersDataSource extends DataSource<Supplier> {
+  data: Supplier[] = suppliers;
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
@@ -28,7 +28,7 @@ export class SuppliersDataSource extends DataSource<Suppliers> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<Suppliers[]> {
+  connect(): Observable<Supplier[]> {
     if (this.paginator && this.sort) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
@@ -51,7 +51,7 @@ export class SuppliersDataSource extends DataSource<Suppliers> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: Suppliers[]): Suppliers[] {
+  private getPagedData(data: Supplier[]): Supplier[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -64,15 +64,16 @@ export class SuppliersDataSource extends DataSource<Suppliers> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: Suppliers[]): Suppliers[] {
+  private getSortedData(data: Supplier[]): Supplier[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }
 
-    return data.sort((a: Suppliers, b: Suppliers) => {
+    return data.sort((a: Supplier, b: Supplier) => {
       const isAsc = this.sort?.direction === 'asc';
+
       switch (this.sort?.active) {
-        case 'id': return compare(a.id, b.id, isAsc);
+        case 'id': return compare(a.id!, b.id!, isAsc);
         default: return 0;
       }
     });

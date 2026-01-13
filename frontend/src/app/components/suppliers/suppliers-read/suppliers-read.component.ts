@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Suppliers } from '../suppliers.model';
+import { Supplier } from '../suppliers.model';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
@@ -14,10 +14,10 @@ import { SuppliersService } from '../suppliers.service';
 export class SuppliersReadComponent implements OnInit{
   @ViewChild(MatPaginator) paginator!: MatPaginator
   @ViewChild(MatSort) sort!: MatSort
-  @ViewChild(MatTable) table!: MatTable<Suppliers>
+  @ViewChild(MatTable) table!: MatTable<Supplier>
   datasource: SuppliersDataSource
 
-  suppliers!: Suppliers[];
+  suppliers!: Supplier[];
   displayedColumns = ['id', 'code', 'name', 'shortname', 'telephone', 'action']
 
   constructor(private suppliersService: SuppliersService) {

@@ -29,6 +29,7 @@ import { MatMenuModule } from '@angular/material/menu'
 import { HttpClientModule } from '@angular/common/http';
 import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule }  from '@angular/material/snack-bar'
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSortModule,
     MatMenuModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

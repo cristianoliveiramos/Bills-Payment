@@ -1,28 +1,28 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 
-<mat-card-content style="margin: 5px 100px">
-  <mat-card-title style="font-size: larger;">Novo Fornecedor</mat-card-title>
-  <form action="" style="margin: 5px 100px">
+<mat-card-content style="margin: 50px 0;">
+  <mat-card-title style="font-size: larger; padding: 0 100px;">Novo Fornecedor</mat-card-title>
+  <form action="" style="padding: 0 100px;">
     <mat-form-field>
       <mat-label>Código do Fornecedor</mat-label>
-      <input matInput placeholder="Ex: 999"/>
+      <input matInput placeholder="Ex: 999" [(ngModel)]="supplier.code" type="number" [formControl]="supplierCodeValidation"/>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Razão Social</mat-label>
-      <input matInput placeholder="Ex: Empresa Ltda"/>
+      <input matInput placeholder="Ex: Empresa Ltda" [(ngModel)]="supplier.name" type="text" [formControl]="supplierNameValidation"/>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Nome Fantasia</mat-label>
-      <input matInput placeholder="Ex: Loja de Roupas"/>
+      <input matInput placeholder="Ex: Casa Machado" [(ngModel)]="supplier.shortName" [formControl]="supplierShortNameValidation"/>
     </mat-form-field>
     <mat-form-field>
       <mat-label>Telefone</mat-label>
-      <input matInput placeholder="Ex: (21) 9999-9999" type="tel"/>
+      <input matInput placeholder="Ex: (21) 91234-5678" type="tel" [(ngModel)]="supplier.telephone" [formControl]="supplierTelephoneValidation"/>
     </mat-form-field>
   </form>
   <div style="margin: 5px 100px">
-    <button mat-raised-button class="button-save" (click)="createSupplier()" routerLink="/fornecedores">
+    <button mat-raised-button class="button-save" (click)="createSupplier()" routerLink="/fornecedores" >
       Salvar
     </button>
 
