@@ -36,3 +36,17 @@ th {
   color: var(--default-color);
 }
 
+.btn-new-supplier {
+  color: #244879;
+  width: fit-content;
+  margin-left: 100px;
+  cursor: pointer !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.mdc-list-item {
+  padding: 0;
+}
