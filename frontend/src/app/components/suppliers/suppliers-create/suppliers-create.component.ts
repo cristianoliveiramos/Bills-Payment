@@ -14,7 +14,7 @@ export class SuppliersCreateComponent {
   supplier: Supplier = {
     name: undefined,
     code: undefined,
-    shortName: undefined,
+    shortname: undefined,
     telephone: undefined,
   };
 

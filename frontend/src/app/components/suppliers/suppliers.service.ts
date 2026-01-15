@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root',
 })
 export class SuppliersService {
-  URL = 'http://localhost:3000/suppliers';
+  URL = 'http://localhost:3000';
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
@@ -23,14 +23,34 @@ export class SuppliersService {
   }
 
   read(): Observable<Supplier[]> {
-    return this.http.get<Supplier[]>(this.URL).pipe(
+    const url = `${this.URL}/suppliers`
+    return this.http.get<Supplier[]>(url).pipe(
       map((obj) => obj),
       catchError((err) => this.errorHandler(err))
     );
   }
 
   create(supplier: Supplier): Observable<Supplier> {
-    return this.http.post<Supplier>(this.URL, supplier).pipe(
+    const url = `${this.URL}/suppliers`
+    return this.http.post<Supplier>(url, supplier).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  readById(id: string | null): Observable<Supplier> {
+    const url = `${this.URL}/supplier/${id}`;
+    console.log(url)
+    return this.http.get<Supplier>(url).pipe(
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e))
+    );
+  }
+
+  update(supplier: Supplier): Observable<Supplier> {
+    const url = `${this.URL}/${supplier.id}`;
+
+    return this.http.put<Supplier>(url, supplier).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
