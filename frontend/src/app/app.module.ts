@@ -29,7 +29,8 @@ import { MatMenuModule } from '@angular/material/menu'
 import { HttpClientModule } from '@angular/common/http';
 import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSnackBarModule }  from '@angular/material/snack-bar'
+import { MatSnackBarModule }  from '@angular/material/snack-bar';
+import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,8 @@ import { MatSnackBarModule }  from '@angular/material/snack-bar'
     NavbarComponent,
     SuppliersReadComponent,
     SuppliersCrudComponent,
-    SuppliersCreateComponent
+    SuppliersCreateComponent,
+    SupplierUpdateComponent
   ],
   imports: [
     BrowserModule,
