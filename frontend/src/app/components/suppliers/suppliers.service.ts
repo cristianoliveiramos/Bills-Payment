@@ -40,7 +40,7 @@ export class SuppliersService {
 
   readById(id: string | null): Observable<Supplier> {
     const url = `${this.URL}/supplier/${id}`;
-    console.log(url)
+
     return this.http.get<Supplier>(url).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
@@ -48,7 +48,7 @@ export class SuppliersService {
   }
 
   update(supplier: Supplier): Observable<Supplier> {
-    const url = `${this.URL}/${supplier.id}`;
+    const url = `${this.URL}/supplier/${supplier.id}`;
 
     return this.http.put<Supplier>(url, supplier).pipe(
       map((obj) => obj),
