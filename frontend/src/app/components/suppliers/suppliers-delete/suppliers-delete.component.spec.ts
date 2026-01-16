@@ -1,0 +1,21 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { SuppliersDeleteComponent } from './suppliers-delete.component';
+
+describe('SuppliersDeleteComponent', () => {
+  let component: SuppliersDeleteComponent;
+  let fixture: ComponentFixture<SuppliersDeleteComponent>;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [SuppliersDeleteComponent]
+    });
+    fixture = TestBed.createComponent(SuppliersDeleteComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

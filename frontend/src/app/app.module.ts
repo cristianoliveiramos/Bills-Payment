@@ -30,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule }  from '@angular/material/snack-bar';
-import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component'
+import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component';
+import { SuppliersDeleteComponent } from './components/suppliers/suppliers-delete/suppliers-delete.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +43,8 @@ import { SupplierUpdateComponent } from './components/suppliers/supplier-update/
     SuppliersReadComponent,
     SuppliersCrudComponent,
     SuppliersCreateComponent,
-    SupplierUpdateComponent
+    SupplierUpdateComponent,
+    SuppliersDeleteComponent
   ],
   imports: [
     BrowserModule,
