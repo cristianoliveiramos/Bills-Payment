@@ -7,19 +7,31 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NavbarComponent } from './components/template/navbar/navbar.component';
+import { SuppliersReadComponent } from './components/suppliers/suppliers-read/suppliers-read.component';
+import { SuppliersCrudComponent } from './views/suppliers-crud/suppliers-crud.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule }  from '@angular/material/icon'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatCardModule } from '@angular/material/card';
-import { LoginComponent } from './views/login/login.component'
-import { MatFormFieldModule } from '@angular/material/form-field'
+import { LoginComponent } from './views/login/login.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { NavbarComponent } from './components/template/navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav'
-import { MatListModule } from '@angular/material/list'
-import { MatTooltipModule } from '@angular/material/tooltip'
+import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table'
+import { MatSortModule } from '@angular/material/sort'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatMenuModule } from '@angular/material/menu'
+import { HttpClientModule } from '@angular/common/http';
+import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule }  from '@angular/material/snack-bar';
+import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component';
+import { SuppliersDeleteComponent } from './components/suppliers/suppliers-delete/suppliers-delete.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +39,12 @@ import { MatTooltipModule } from '@angular/material/tooltip'
     HeaderComponent,
     LoginComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    SuppliersReadComponent,
+    SuppliersCrudComponent,
+    SuppliersCreateComponent,
+    SupplierUpdateComponent,
+    SuppliersDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +60,14 @@ import { MatTooltipModule } from '@angular/material/tooltip'
     ReactiveFormsModule,
     MatSidenavModule,
     MatListModule,
-    MatTooltipModule
-
+    MatTooltipModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatMenuModule,
+    HttpClientModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

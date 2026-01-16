@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
   --default-color: #25497a;
+  --white-color-default: #fff;
+  --success-color-default: #198754;
+  --warning-color-default: #ffbf05;
+  --error-color-default: #dc0000;
 }
 
 html, body { height: 100%; }
@@ -9,6 +13,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .button-default {
   background-color: transparent;
   border: none;
-  color: #25497a;
+  color: var(--default-color);
+}
+
+.button-save {
+  background-color: var(--success-color-default) !important;
+  color: var(--white-color-default) !important;
+}
+
+.button-edit {
+  background-color: var(--warning-color-default) !important;
+  color: var(--white-color-default) !important;
+}
+
+.button-delete {
+  background-color: var(--error-color-default) !important;
+  color: var(--white-color-default) !important;
 }
 
