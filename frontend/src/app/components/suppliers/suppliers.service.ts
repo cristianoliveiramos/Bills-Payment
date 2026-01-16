@@ -56,6 +56,15 @@ export class SuppliersService {
     );
   }
 
+  delete(id: string | number | undefined): Observable<Supplier> {
+    const url = `${this.URL}/supplier/${id}`
+
+    return this.http.delete<Supplier>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
   errorHandler(e: any): Observable<any> {
     return EMPTY;
   }
