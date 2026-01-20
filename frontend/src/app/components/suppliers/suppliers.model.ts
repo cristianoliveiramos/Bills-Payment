@@ -5,3 +5,4 @@ export interface Supplier {
   shortname: string | undefined,
   telephone: string | undefined
 }
+
