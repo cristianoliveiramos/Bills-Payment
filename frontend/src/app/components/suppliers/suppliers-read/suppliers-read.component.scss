@@ -50,3 +50,12 @@ th {
 .mdc-list-item {
   padding: 0;
 }
+
+mat-paginator {
+  color: var(--default-color);
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
