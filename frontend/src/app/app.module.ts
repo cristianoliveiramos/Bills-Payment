@@ -32,6 +32,8 @@ import {
   MatPaginatorModule,
 } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -75,6 +77,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     HttpClientModule,
     MatButtonModule,
     MatSnackBarModule,
+    MatSelectModule,
   ],
   providers: [
     {

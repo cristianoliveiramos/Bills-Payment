@@ -1,32 +1,206 @@
 <app-header></app-header>
 <app-navbar></app-navbar>
 
-<mat-card-content style="margin: 50px 0;">
-  <mat-card-title style="font-size: larger; padding: 0 100px;">Novo Fornecedor</mat-card-title>
-  <form action="" style="padding: 0 100px;">
-    <mat-form-field>
-      <mat-label>Código do Fornecedor</mat-label>
-      <input matInput placeholder="Ex: 999" [(ngModel)]="supplier.code" type="number" [formControl]="supplierCodeValidation"/>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Razão Social</mat-label>
-      <input matInput placeholder="Ex: Empresa Ltda" [(ngModel)]="supplier.name" type="text" [formControl]="supplierNameValidation"/>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Nome Fantasia</mat-label>
-      <input matInput placeholder="Ex: Casa Machado" [(ngModel)]="supplier.shortname" [formControl]="supplierShortNameValidation"/>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Telefone</mat-label>
-      <input matInput placeholder="Ex: (21) 91234-5678" type="tel" [(ngModel)]="supplier.telephone" [formControl]="supplierTelephoneValidation"/>
-    </mat-form-field>
+<mat-card-content style="margin: 50px 0">
+  <mat-card-title style="font-size: larger; padding: 0 100px"
+    >Novo Fornecedor</mat-card-title
+  >
+  <form action="" style="padding: 0 100px">
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Código do Fornecedor</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 999"
+              [(ngModel)]="supplier.code"
+              type="number"
+              [formControl]="supplierCodeValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Razão Social</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Empresa Ltda"
+              [(ngModel)]="supplier.name"
+              type="text"
+              [formControl]="supplierNameValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Nome Fantasia</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Casa Machado"
+              [(ngModel)]="supplier.shortname"
+              [formControl]="supplierShortNameValidation"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>CNPJ</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 35.768.100/0001-00"
+              [(ngModel)]="supplier.cnpj"
+              [formControl]="supplierCNPJValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Inscrição Estadual</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 110.042.490.114"
+              [(ngModel)]="supplier.state_inscription"
+              [formControl]="supplierStateInscriptionValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Inscrição Municipal</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 110.042.490.114"
+              [(ngModel)]="supplier.city_inscription"
+              [formControl]="supplierCitynscriptionValidation"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Endereço</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Rua do Comércio, 100"
+              [(ngModel)]="supplier.address"
+              [formControl]="supplierAddressValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Cidade</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Duque de Caxias"
+              [(ngModel)]="supplier.city"
+              [formControl]="supplierCityValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Estado</mat-label>
+            <mat-select name="states" [(ngModel)]="supplier.state">
+              <mat-option *ngFor="let state of states" value="{{ state.uf }}">
+                {{ state.uf }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Bairro</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Centro"
+              [(ngModel)]="supplier.neighborhood"
+              [formControl]="supplierNeighborhoodValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>CEP</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 00001-100"
+              [(ngModel)]="supplier.zip_code"
+              [formControl]="supplierZipcodeValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Contato do Fornecedor</mat-label>
+            <input
+              matInput
+              placeholder="Ex: (15) 2771-8872"
+              [(ngModel)]="supplier.telephone"
+              [formControl]="supplierContactValidation"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 90%">
+            <mat-label>Nome do Representante</mat-label>
+            <input
+              matInput
+              placeholder="Ex: João"
+              [(ngModel)]="supplier.representative_sales"
+              [formControl]="supplierRepresentativeSalesValidation"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 90%">
+            <mat-label>Contato do Representante</mat-label>
+            <input
+              matInput
+              placeholder="Ex: (15) 98765-4321"
+              [(ngModel)]="supplier.representative_whatsapp"
+              [formControl]="supplierRepresentativeContactValidation"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
   </form>
   <div style="margin: 5px 100px">
-    <button mat-raised-button class="button-save" (click)="createSupplier()" routerLink="/fornecedores" >
+    <button
+      mat-raised-button
+      class="button-save"
+      (click)="createSupplier()"
+      routerLink="/fornecedores"
+    >
       Salvar
     </button>
 
-    <button mat-raised-button class="button-default" (click)="cancel()" routerLink="/fornecedores">
+    <button
+      mat-raised-button
+      class="button-default"
+      (click)="cancel()"
+      routerLink="/fornecedores"
+    >
       Cancelar
     </button>
   </div>
