@@ -33,12 +33,14 @@ import {
 } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+  import {MatButtonModule} from '@angular/material/button';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PaginatorComponent } from './components/template/paginator/paginator.component';
-import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { SupplierReadInfosComponent } from './components/suppliers/supplier-read-infos/supplier-read-infos.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     SupplierUpdateComponent,
     SuppliersDeleteComponent,
     PaginatorComponent,
+    SupplierReadInfosComponent
   ],
   imports: [
     BrowserModule,
@@ -78,6 +81,9 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     MatButtonModule,
     MatSnackBarModule,
     MatSelectModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [
     {

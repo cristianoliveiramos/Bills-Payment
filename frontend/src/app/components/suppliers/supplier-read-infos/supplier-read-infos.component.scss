@@ -1,0 +1,20 @@
+.mat-mdc-dialog-actions, .mdc-dialog__actions, .mat-mdc-dialog-actions-align-end {
+  min-height: min-content;
+  padding: 6px;
+}
+
+.close-dialog {
+  background-color: transparent;
+  color: var(--default-color);
+  border: 1px solid var(--default-color);
+  font-size: larger;
+  cursor: pointer;
+}
+
+.close-dialog:focus-visible {
+  border: none !important;
+}
+
+.input-data {
+  color: var(--default-color) !important;
+}
