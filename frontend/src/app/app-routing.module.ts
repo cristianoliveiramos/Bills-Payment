@@ -7,6 +7,7 @@ import { SuppliersReadComponent } from './components/suppliers/suppliers-read/su
 import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
 import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component';
 import { SuppliersDeleteComponent } from './components/suppliers/suppliers-delete/suppliers-delete.component';
+import { BillspaymentsComponent } from './components/billspayments/billspayments.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,10 @@ const routes: Routes = [
     path: 'excluir-fornecedor/:id',
     component: SuppliersDeleteComponent,
   },
+  {
+    path: 'pagamentos',
+    component: BillspaymentsComponent
+  }
 ];
 
 @NgModule({

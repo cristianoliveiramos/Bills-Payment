@@ -41,6 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginatorComponent } from './components/template/paginator/paginator.component';
 import { SupplierReadInfosComponent } from './components/suppliers/supplier-read-infos/supplier-read-infos.component';
+import { BillspaymentsComponent } from './components/billspayments/billspayments.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { SupplierReadInfosComponent } from './components/suppliers/supplier-read
     SupplierUpdateComponent,
     SuppliersDeleteComponent,
     PaginatorComponent,
-    SupplierReadInfosComponent
+    SupplierReadInfosComponent,
+    BillspaymentsComponent
   ],
   imports: [
     BrowserModule,
