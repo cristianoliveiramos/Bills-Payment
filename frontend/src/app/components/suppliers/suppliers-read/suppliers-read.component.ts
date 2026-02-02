@@ -1,16 +1,16 @@
-import { Observable } from 'rxjs';
+import { SupplierReadInfosComponent } from './../supplier-read-infos/supplier-read-infos.component';
+import { Supplier } from './../suppliers.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Supplier } from '../suppliers.model';
 import {
   MatPaginator,
-  MatPaginatorIntl,
   PageEvent,
 } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
-import { SuppliersDataSource } from '../suppliers-datasource';
+
 import { SuppliersService } from '../suppliers.service';
-import { Router } from '@angular/router';
+
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-suppliers-read',
@@ -23,6 +23,7 @@ export class SuppliersReadComponent implements OnInit {
   @ViewChild(MatTable) table!: MatTable<Supplier>;
 
   suppliers!: Supplier[];
+  supplier!: Supplier;
   datasource = new MatTableDataSource<Supplier>();
 
   displayedColumns = ['id', 'code', 'name', 'shortname', 'telephone', 'action'];
@@ -31,8 +32,17 @@ export class SuppliersReadComponent implements OnInit {
 
   constructor(
     private suppliersService: SuppliersService,
-    private router: Router,
+    private dialog: MatDialog,
   ) {}
+
+  openDialog($event: Event) {
+    this.dialog.open(SupplierReadInfosComponent, {
+      data: $event,
+      enterAnimationDuration: '500ms ',
+      width: '80vw',
+      height: '80vh',
+    });
+  }
 
   ngOnInit(): void {
     this.suppliersService.read().subscribe((suppliers) => {

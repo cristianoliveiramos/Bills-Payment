@@ -11,36 +11,36 @@ import { SuppliersDeleteComponent } from './components/suppliers/suppliers-delet
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: 'fornecedores',
-    component: SuppliersReadComponent
+    component: SuppliersReadComponent,
   },
   {
     path: 'incluir-fornecedor',
-    component: SuppliersCreateComponent
+    component: SuppliersCreateComponent,
   },
   {
     path: 'editar-fornecedor/:id',
-    component: SupplierUpdateComponent
+    component: SupplierUpdateComponent,
   },
   {
     path: 'excluir-fornecedor/:id',
-    component: SuppliersDeleteComponent
-  }
+    component: SuppliersDeleteComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
