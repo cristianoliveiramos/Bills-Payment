@@ -3,53 +3,188 @@
 
 <mat-card-content style="margin: 50px 0">
   <mat-card-title style="font-size: larger; padding: 0 100px"
-    >Novo Fornecedor</mat-card-title
+    >Excluir Fornecedor</mat-card-title
   >
   <form style="padding: 0 100px">
-    <mat-form-field>
-      <mat-label>Código do Fornecedor</mat-label>
-      <input
-        matInput
-        placeholder="Ex: 999"
-        [(ngModel)]="supplier.code"
-        type="number"
-        name="code"
-        disabled
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Razão Social</mat-label>
-      <input
-        matInput
-        placeholder="Ex: Empresa Ltda"
-        [(ngModel)]="supplier.name"
-        type="text"
-        name="name"
-        disabled
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Nome Fantasia</mat-label>
-      <input
-        matInput
-        placeholder="Ex: Casa Machado"
-        [(ngModel)]="supplier.shortname"
-        type="text"
-        name="shortname"
-        disabled
-      />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Telefone</mat-label>
-      <input
-        matInput
-        placeholder="Ex: (21) 91234-5678"
-        type="tel"
-        [(ngModel)]="supplier.telephone"
-        name="telephone"
-        disabled
-      />
-    </mat-form-field>
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Código do Fornecedor</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 999"
+              value="{{supplier.code}}"
+              type="number"
+              name="code"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Razão Social</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Empresa Ltda"
+              value="{{supplier.name}}"
+              type="text"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Nome Fantasia</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Casa Machado"
+              value="{{supplier.shortname}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>CNPJ</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 35.768.100/0001-00"
+              value="{{supplier.cnpj}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Inscrição Estadual</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 110.042.490.114"
+              value="{{supplier.state_inscription}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Inscrição Municipal</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 110.042.490.114"
+              value="{{supplier.city_inscription}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Endereço</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Rua do Comércio, 100"
+              value="{{supplier.address}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Cidade</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Duque de Caxias"
+              value="{{supplier.city}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Estado</mat-label>
+            <mat-select name="states" disabled value="{{supplier.state}}">
+              <mat-option value="{{supplier.state}}">
+                {{ supplier.state }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Bairro</mat-label>
+            <input
+              matInput
+              placeholder="Ex: Centro"
+              value="{{supplier.neighborhood}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>CEP</mat-label>
+            <input
+              matInput
+              placeholder="Ex: 00001-100"
+              value="{{supplier.zip_code}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Contato do Fornecedor</mat-label>
+            <input
+              matInput
+              placeholder="Ex: (15) 2771-8872"
+              value="{{supplier.telephone}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr>
+        <td>
+          <mat-form-field style="width: 90%">
+            <mat-label>Nome do Representante</mat-label>
+            <input
+              matInput
+              placeholder="Ex: João"
+              value="{{supplier.representative_sales}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field style="width: 100%">
+            <mat-label>Contato do Representante</mat-label>
+            <input
+              matInput
+              placeholder="Ex: (15) 98765-4321"
+              value="{{supplier.representative_whatsapp}}"
+              disabled
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
   </form>
   <div style="margin: 5px 100px">
     <button mat-raised-button class="button-delete" (click)="deleteSupplier()">
