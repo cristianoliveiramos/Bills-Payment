@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-billspayments',
-  templateUrl: './billspayments.component.html',
-  styleUrls: ['./billspayments.component.scss']
+  selector: 'app-payment-read',
+  templateUrl: './payment-read.component.html',
+  styleUrls: ['./payment-read.component.scss']
 })
-export class BillspaymentsComponent {
+export class PaymentReadComponent {
   displayColumns: string[] = ['position', 'name', 'weight', 'symbol']
   dataSource = ELEMENT_DATA
-
 }
 
 export interface PeriodicElement {

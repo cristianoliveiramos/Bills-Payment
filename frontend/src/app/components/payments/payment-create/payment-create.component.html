@@ -1,0 +1,29 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+
+<mat-card-content style="margin: 50px 0">
+  <mat-card-title style="font-size: larger; padding: 0 100px"
+    >Incluir Pagamento</mat-card-title
+  >
+
+  <form action="" style="padding: 0 100px">
+    <mat-form-field style="width: 100%">
+      <mat-label>Fornecedor</mat-label>
+      <mat-select [(ngModel)]="suppliers" name="suppliersName">
+        <mat-option *ngFor="let supplier of suppliers" value="supplier.code">{{supplier.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+      <mat-label>Código do Documento</mat-label>
+      <input matInput type="number"/>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+      <mat-label>Quantidade de Parcelas</mat-label>
+      <mat-select [(ngModel)]="installments" name="installmentsPayment">
+        <mat-option *ngFor="let installment of installments" value="{{installment.value}}">{{installment.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-card-content>

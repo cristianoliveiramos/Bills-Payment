@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
+import { LoginComponent } from './views/login/login.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { NavbarComponent } from './components/template/navbar/navbar.component';
@@ -13,12 +14,15 @@ import { SuppliersCreateComponent } from './components/suppliers/suppliers-creat
 import { SuppliersReadComponent } from './components/suppliers/suppliers-read/suppliers-read.component';
 import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component';
 import { SuppliersDeleteComponent } from './components/suppliers/suppliers-delete/suppliers-delete.component';
+import { SupplierReadInfosComponent } from './components/suppliers/supplier-read-infos/supplier-read-infos.component';
+import { PaymentReadComponent } from './components/payments/payment-read/payment-read.component';
+import { PaymentCreateComponent } from './components/payments/payment-create/payment-create.component';
+import { PaginatorComponent } from './components/template/paginator/paginator.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatCardModule } from '@angular/material/card';
-import { LoginComponent } from './views/login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -39,9 +43,6 @@ import { MatDialogModule } from '@angular/material/dialog';
   import {MatButtonModule} from '@angular/material/button';
 
 import { HttpClientModule } from '@angular/common/http';
-import { PaginatorComponent } from './components/template/paginator/paginator.component';
-import { SupplierReadInfosComponent } from './components/suppliers/supplier-read-infos/supplier-read-infos.component';
-import { BillspaymentsComponent } from './components/billspayments/billspayments.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { BillspaymentsComponent } from './components/billspayments/billspayments
     SuppliersDeleteComponent,
     PaginatorComponent,
     SupplierReadInfosComponent,
-    BillspaymentsComponent
+    PaymentCreateComponent,
+    PaymentReadComponent
   ],
   imports: [
     BrowserModule,

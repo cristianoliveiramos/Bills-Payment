@@ -7,7 +7,8 @@ import { SuppliersReadComponent } from './components/suppliers/suppliers-read/su
 import { SuppliersCreateComponent } from './components/suppliers/suppliers-create/suppliers-create.component';
 import { SupplierUpdateComponent } from './components/suppliers/supplier-update/supplier-update.component';
 import { SuppliersDeleteComponent } from './components/suppliers/suppliers-delete/suppliers-delete.component';
-import { BillspaymentsComponent } from './components/billspayments/billspayments.component';
+import { PaymentReadComponent } from './components/payments/payment-read/payment-read.component';
+import { PaymentCreateComponent } from './components/payments/payment-create/payment-create.component';
 
 const routes: Routes = [
   {
@@ -40,7 +41,11 @@ const routes: Routes = [
   },
   {
     path: 'pagamentos',
-    component: BillspaymentsComponent
+    component: PaymentReadComponent
+  },
+  {
+    path: 'incluir-pagamento',
+    component: PaymentCreateComponent
   }
 ];
 
