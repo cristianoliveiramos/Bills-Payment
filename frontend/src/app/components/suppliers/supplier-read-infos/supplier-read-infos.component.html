@@ -1,0 +1,104 @@
+<mat-dialog-actions align="end">
+  <button matButton="outlined" mat-dialog-close class="close-dialog">X</button>
+</mat-dialog-actions>
+<h2 mat-dialog-title class="input-data">Fornecedor:</h2>
+<div mat-dialog-content class="mat-typography" style="overflow-y: hidden;">
+  <table style="width: 100%;">
+    <tr>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Código do Fornecedor</mat-label>
+          <input matInput value="{{ data.code }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Razão Social</mat-label>
+          <input matInput value="{{ data.name }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Nome Fantasia</mat-label>
+          <input matInput value="{{ data.shortname }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>CNPJ</mat-label>
+          <input matInput value="{{ data.cnpj }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Inscrição Estadual</mat-label>
+          <input matInput value="{{ data.state_inscription }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Inscrição Municipal</mat-label>
+          <input matInput value="{{ data.city_inscription }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Endereço</mat-label>
+          <input matInput value="{{ data.address }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Cidade</mat-label>
+          <input matInput value="{{ data.city }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Estado</mat-label>
+          <input matInput value="{{ data.state }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Bairro</mat-label>
+          <input matInput value="{{ data.neighborhood }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>CEP</mat-label>
+          <input matInput value="{{ data.zip_code }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Contato</mat-label>
+          <input matInput value="{{ data.telephone }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+    </tr>
+    <h2 class="input-data">Representante:</h2>
+    <tr>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Nome do Representante</mat-label>
+          <input matInput value="{{ data.representative_sales }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Contato do Representante</mat-label>
+          <input matInput value="{{ data.representative_whatsapp }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+
+    </tr>
+  </table>
+</div>

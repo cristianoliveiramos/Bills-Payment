@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { Supplier } from '../suppliers.model';
+import { States, Supplier } from '../suppliers.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SuppliersService } from '../suppliers.service';
 
@@ -11,6 +11,36 @@ import { SuppliersService } from '../suppliers.service';
 })
 export class SupplierUpdateComponent {
   supplier!: Supplier;
+
+  states: States[] = [
+      { uf: 'AC' },
+      { uf: 'AL' },
+      { uf: 'AP' },
+      { uf: 'AM' },
+      { uf: 'BA' },
+      { uf: 'CE' },
+      { uf: 'DF' },
+      { uf: 'ES' },
+      { uf: 'GO' },
+      { uf: 'MA' },
+      { uf: 'MS' },
+      { uf: 'MT' },
+      { uf: 'MG' },
+      { uf: 'PA' },
+      { uf: 'PB' },
+      { uf: 'PR' },
+      { uf: 'PE' },
+      { uf: 'PI' },
+      { uf: 'RJ' },
+      { uf: 'RN' },
+      { uf: 'RS' },
+      { uf: 'RO' },
+      { uf: 'RR' },
+      { uf: 'SC' },
+      { uf: 'SP' },
+      { uf: 'SE' },
+      { uf: 'TO' },
+    ];
 
   constructor(
     private router: Router,
@@ -41,10 +71,51 @@ export class SupplierUpdateComponent {
     Validators.min(3),
     Validators.pattern('[a-zA-Z]'),
   ]);
-  supplierTelephoneValidation = new FormControl<string>('', [
+  supplierContactValidation = new FormControl<string>('', [
     Validators.required,
     Validators.min(10),
     Validators.max(11),
+  ]);
+  supplierCNPJValidation = new FormControl<string>('', [
+    Validators.required,
+    Validators.min(18),
+    Validators.max(18),
+  ]);
+  supplierAddressValidation = new FormControl<string>('', [
+    Validators.required,
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierCityValidation = new FormControl<string>('', [
+    Validators.required,
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierNeighborhoodValidation = new FormControl<string>('', [
+    Validators.required,
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierZipcodeValidation = new FormControl<string>('', [
+    Validators.required,
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierRepresentativeSalesValidation = new FormControl<string>('', [
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierRepresentativeContactValidation = new FormControl<string>('', [
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierStateInscriptionValidation = new FormControl<string>('', [
+    Validators.min(10),
+    Validators.max(50),
+  ]);
+  supplierCitynscriptionValidation = new FormControl<string>('', [
+    Validators.min(10),
+    Validators.max(50),
   ]);
 
   cancel() {
