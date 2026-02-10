@@ -71,8 +71,16 @@ export class SupplierUpdateComponent {
     Validators.min(3),
     Validators.pattern('[a-zA-Z]'),
   ]);
-  supplierContactValidation = new FormControl<string>('', [
+  supplierTelephoneValidation = new FormControl<string>('', [
     Validators.required,
+    Validators.min(10),
+    Validators.max(11),
+  ]);
+  supplierWhatsappValidation = new FormControl<string>('', [
+    Validators.min(10),
+    Validators.max(11),
+  ]);
+  supplierEmailValidation = new FormControl<string>('', [
     Validators.min(10),
     Validators.max(11),
   ]);

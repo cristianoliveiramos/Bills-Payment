@@ -71,19 +71,47 @@
             />
           </mat-form-field>
         </td>
-        <td>
-          <mat-form-field style="width: 100%">
-            <mat-label>Inscrição Municipal</mat-label>
-            <input
-              matInput
-              placeholder="Ex: 110.042.490.114"
-              [(ngModel)]="supplier.city_inscription"
-              [formControl]="supplierCitynscriptionValidation"
-            />
-          </mat-form-field>
-        </td>
       </tr>
     </table>
+
+    <table>
+        <tr>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>Telefone Fixo</mat-label>
+              <input
+                matInput
+                placeholder="Ex: (15) 2771-8872"
+                [(ngModel)]="supplier.telephone"
+                [formControl]="supplierTelephoneValidation"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>Whatsapp</mat-label>
+              <input
+                matInput
+                placeholder="Ex: (15) 2771-8872"
+                [(ngModel)]="supplier.whatsapp"
+                [formControl]="supplierWhatsappValidation"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>E-mail</mat-label>
+              <input
+                matInput
+                placeholder="Ex: alguem@dominio.com.br"
+                [(ngModel)]="supplier.email"
+                [formControl]="supplierEmailValidation"
+                type="email"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
 
     <table class="example-full-width" cellspacing="0">
       <tr>
@@ -147,12 +175,12 @@
         </td>
         <td>
           <mat-form-field style="width: 100%">
-            <mat-label>Contato do Fornecedor</mat-label>
+            <mat-label>Telefone Fixo</mat-label>
             <input
               matInput
               placeholder="Ex: (15) 2771-8872"
               [(ngModel)]="supplier.telephone"
-              [formControl]="supplierContactValidation"
+              [formControl]="supplierTelephoneValidation"
             />
           </mat-form-field>
         </td>

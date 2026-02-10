@@ -26,7 +26,7 @@ export class SuppliersReadComponent implements OnInit {
   supplier!: Supplier;
   datasource = new MatTableDataSource<Supplier>();
 
-  displayedColumns = ['id', 'code', 'name', 'shortname', 'telephone', 'action'];
+  displayedColumns = ['id', 'code', 'name', 'shortname', 'whatsapp', 'telephone', 'action'];
 
   currentPage: number = 0;
 

@@ -5,9 +5,9 @@ export interface Supplier {
   shortname: string | undefined;
   cnpj: string | undefined;
   state_inscription?: string | undefined;
-  city_inscription?: string | undefined;
   telephone: string | undefined;
   whatsapp?: string | undefined;
+  email?: string | undefined;
   address: string | undefined;
   city: string | undefined;
   neighborhood: string | undefined;

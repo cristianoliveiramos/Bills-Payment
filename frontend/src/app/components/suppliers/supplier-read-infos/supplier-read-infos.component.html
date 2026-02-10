@@ -2,7 +2,7 @@
   <button matButton="outlined" mat-dialog-close class="close-dialog">X</button>
 </mat-dialog-actions>
 <h2 mat-dialog-title class="input-data">Fornecedor:</h2>
-<div mat-dialog-content class="mat-typography" style="overflow-y: hidden;">
+<div mat-dialog-content class="mat-typography">
   <table style="width: 100%;">
     <tr>
       <td>
@@ -37,10 +37,24 @@
           <input matInput value="{{ data.state_inscription }}" disabled class="input-data"/>
         </mat-form-field>
       </td>
+    </tr>
+    <tr>
       <td>
         <mat-form-field style="width: 100%">
-          <mat-label>Inscrição Municipal</mat-label>
-          <input matInput value="{{ data.city_inscription }}" disabled class="input-data"/>
+          <mat-label>Whatsapp</mat-label>
+          <input matInput value="{{ data.whatsapp }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Telefone Fixo</mat-label>
+          <input matInput value="{{ data.telephone }}" disabled class="input-data"/>
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field style="width: 100%">
+          <mat-label>Email</mat-label>
+          <input matInput value="{{ data.email }}" disabled class="input-data"/>
         </mat-form-field>
       </td>
     </tr>
@@ -84,7 +98,7 @@
         </mat-form-field>
       </td>
     </tr>
-    <h2 class="input-data">Representante:</h2>
+    <h4 class="input-data">Representante:</h4>
     <tr>
       <td>
         <mat-form-field style="width: 100%">

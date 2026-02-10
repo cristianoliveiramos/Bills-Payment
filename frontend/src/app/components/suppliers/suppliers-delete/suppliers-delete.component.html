@@ -13,10 +13,7 @@
             <mat-label>Código do Fornecedor</mat-label>
             <input
               matInput
-              placeholder="Ex: 999"
               value="{{supplier.code}}"
-              type="number"
-              name="code"
               disabled
             />
           </mat-form-field>
@@ -65,19 +62,7 @@
             <mat-label>Inscrição Estadual</mat-label>
             <input
               matInput
-              placeholder="Ex: 110.042.490.114"
               value="{{supplier.state_inscription}}"
-              disabled
-            />
-          </mat-form-field>
-        </td>
-        <td>
-          <mat-form-field style="width: 100%">
-            <mat-label>Inscrição Municipal</mat-label>
-            <input
-              matInput
-              placeholder="Ex: 110.042.490.114"
-              value="{{supplier.city_inscription}}"
               disabled
             />
           </mat-form-field>
@@ -85,7 +70,42 @@
       </tr>
     </table>
 
-    <table class="example-full-width" cellspacing="0">
+    <table>
+        <tr>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>Telefone Fixo</mat-label>
+              <input
+                matInput
+                value="{{supplier.telephone}}"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>Whatsapp</mat-label>
+              <input
+                matInput
+                value="{{supplier.whatsapp}}"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>E-mail</mat-label>
+              <input
+                matInput
+                value="{{supplier.email}}"
+                disabled
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+    <table>
       <tr>
         <td>
           <mat-form-field style="width: 100%">
@@ -121,6 +141,7 @@
         </td>
       </tr>
     </table>
+
     <table>
       <tr>
         <td>
@@ -147,10 +168,9 @@
         </td>
         <td>
           <mat-form-field style="width: 100%">
-            <mat-label>Contato do Fornecedor</mat-label>
+            <mat-label>Telefone Fixo</mat-label>
             <input
               matInput
-              placeholder="Ex: (15) 2771-8872"
               value="{{supplier.telephone}}"
               disabled
             />

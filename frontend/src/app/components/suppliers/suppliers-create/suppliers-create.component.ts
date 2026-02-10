@@ -48,6 +48,8 @@ export class SuppliersCreateComponent {
     cnpj: undefined,
     state_inscription: undefined,
     telephone: undefined,
+    whatsapp: undefined,
+    email: undefined,
     address: undefined,
     city: undefined,
     neighborhood: undefined,
@@ -77,8 +79,16 @@ export class SuppliersCreateComponent {
     Validators.min(3),
     Validators.pattern('[a-zA-Z]'),
   ]);
-  supplierContactValidation = new FormControl<string>('', [
+  supplierTelephoneValidation = new FormControl<string>('', [
     Validators.required,
+    Validators.min(10),
+    Validators.max(11),
+  ]);
+  supplierWhatsappValidation = new FormControl<string>('', [
+    Validators.min(10),
+    Validators.max(11),
+  ]);
+  supplierEmailValidation = new FormControl<string>('', [
     Validators.min(10),
     Validators.max(11),
   ]);
@@ -116,10 +126,6 @@ export class SuppliersCreateComponent {
     Validators.max(50),
   ]);
   supplierStateInscriptionValidation = new FormControl<string>('', [
-    Validators.min(10),
-    Validators.max(50),
-  ]);
-  supplierCitynscriptionValidation = new FormControl<string>('', [
     Validators.min(10),
     Validators.max(50),
   ]);

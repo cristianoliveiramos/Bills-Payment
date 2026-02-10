@@ -70,17 +70,6 @@
             />
           </mat-form-field>
         </td>
-        <td>
-          <mat-form-field style="width: 100%">
-            <mat-label>Inscrição Municipal</mat-label>
-            <input
-              matInput
-              placeholder="Ex: 110.042.490.114"
-              [(ngModel)]="supplier.city_inscription"
-              [formControl]="supplierCitynscriptionValidation"
-            />
-          </mat-form-field>
-        </td>
       </tr>
     </table>
 
@@ -144,20 +133,49 @@
             />
           </mat-form-field>
         </td>
-        <td>
-          <mat-form-field style="width: 100%">
-            <mat-label>Contato do Fornecedor</mat-label>
-            <input
-              matInput
-              placeholder="Ex: (15) 2771-8872"
-              [(ngModel)]="supplier.telephone"
-              [formControl]="supplierContactValidation"
-            />
-          </mat-form-field>
-        </td>
       </tr>
-    </table>
+      </table>
 
+      <table>
+        <tr>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>Telefone Fixo</mat-label>
+              <input
+                matInput
+                placeholder="Ex: (15) 2771-8872"
+                [(ngModel)]="supplier.telephone"
+                [formControl]="supplierTelephoneValidation"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>Whatsapp</mat-label>
+              <input
+                matInput
+                placeholder="Ex: (21) 98787-8888"
+                [(ngModel)]="supplier.whatsapp"
+                [formControl]="supplierWhatsappValidation"
+              />
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field style="width: 100%">
+              <mat-label>E-mail</mat-label>
+              <input
+                matInput
+                placeholder="alguem@dominio.com.br"
+                [(ngModel)]="supplier.email"
+                [formControl]="supplierEmailValidation"
+                type="email"
+              />
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+
+    <mat-card-title>Representante</mat-card-title>
     <table>
       <tr>
         <td>
