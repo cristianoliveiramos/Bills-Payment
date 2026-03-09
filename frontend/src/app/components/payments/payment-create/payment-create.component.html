@@ -2,28 +2,61 @@
 <app-navbar></app-navbar>
 
 <mat-card-content style="margin: 50px 0">
-  <mat-card-title style="font-size: larger; padding: 0 100px"
-    >Incluir Pagamento</mat-card-title
-  >
+  <mat-card-title style="font-size: larger; padding: 0 100px">Incluir Pagamento</mat-card-title>
 
   <form action="" style="padding: 0 100px">
     <mat-form-field style="width: 100%">
       <mat-label>Fornecedor</mat-label>
-      <mat-select [(ngModel)]="suppliers" name="suppliersName">
-        <mat-option *ngFor="let supplier of suppliers" value="supplier.code">{{supplier.name}}</mat-option>
+      <mat-select [(ngModel)]="payment.supplierID" name="supplier">
+        <mat-option *ngFor="let supplier of suppliers" value={{supplier.id}}>{{supplier.code}} - {{supplier.name}}</mat-option>
       </mat-select>
     </mat-form-field>
 
     <mat-form-field style="width: 100%">
       <mat-label>Código do Documento</mat-label>
-      <input matInput type="number"/>
+      <input matInput type="number" [(ngModel)]="payment.documentCode" name="documentCode"/>
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+      <mat-label>Data de Entrada</mat-label>
+      <input matInput placeholder="DD/MM/AAAA" [(ngModel)]="payment.date" name="date" [matDatepicker]="dateReceiptPicker"/>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="dateReceiptPicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #dateReceiptPicker></mat-datepicker>
     </mat-form-field>
 
     <mat-form-field style="width: 100%">
       <mat-label>Quantidade de Parcelas</mat-label>
-      <mat-select [(ngModel)]="installments" name="installmentsPayment">
+      <mat-select [(ngModel)]="payment.installments" name="installmentsPayment">
         <mat-option *ngFor="let installment of installments" value="{{installment.value}}">{{installment.viewValue}}</mat-option>
       </mat-select>
     </mat-form-field>
+
+    <mat-form-field style="width: 100%">
+      <mat-label>Total</mat-label>
+      <input matInput type="number" placeholder="Digite o valor" [(ngModel)]="payment.total" name="total"/>
+    </mat-form-field>
   </form>
+
+  <div style="margin: 5px 100px">
+    <button
+      mat-raised-button
+      class="button-save"
+      routerLink="/pagamentos"
+      (click)="save()"
+    >
+      Salvar
+    </button>
+
+    <button
+      mat-raised-button
+      class="button-default"
+      (click)="cancel()"
+      routerLink="/pagamentos"
+    >
+      Cancelar
+    </button>
+  </div>
 </mat-card-content>
